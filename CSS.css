@@ -1,0 +1,233 @@
+/* Reset some default styles */
+footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(41, 41, 41, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    color: #f8c24a;
+
+}
+body, h1, form, input, label, div, a, button {
+    margin-right: .5%;
+    margin-left: .5%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    background-color: #1e1e1e;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background wrapper */
+.background {
+    background-image: url('https://wallpapers.com/images/hd/gold-world-map-on-black-background-66cutmegkqqnzjca.jpg'); /* Replace 'your-image.jpg' with the actual image */
+    background-size: cover; /* Ensure it covers the entire viewport */
+    background-position: center;
+    filter: blur(5px); /* Apply blur to the background */
+    transform: scale(1.1); /* Scale the background slightly to hide edges */
+    position: fixed;
+    opacity: 30%;/* Ensure the background fills the page and stays in place */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Keep the background behind the content */
+}
+/* Table container styling */
+.table-container {
+    overflow-y: auto; /* Add vertical scrolling */
+    max-height: 26.5em; /* Limit the height of the table container */
+    border: 1px solid #f8c24a; /* Gold border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 2%;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spaces between table cells */
+}
+
+/* Table headers */
+table th {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #f8c24a; /* Gold border for headers */
+    color: #2d2d2d;
+    background-color: #f8c24a;/* Gold text color */
+}
+
+/* Table rows and cells */
+table td {
+    padding: 8px;
+    border: 1px solid #f8c24a; /* Gold border for cells */
+    color: #e3e3e3; /* Gold text color */
+}
+
+/* Alternate row background color */
+table tr:nth-child(even) {
+    background-color: #2d2d2d; /* Slightly lighter dark background for even rows */
+}
+
+/* Hover effect for rows */
+table tr:hover {
+    background-color: #3a3a3a; /* Highlight table row on hover */
+}
+
+/* Empty table row fallback message */
+table td[colspan] {
+    text-align: center;
+    color: #b99b4b; /* Light gold text for empty state */
+}
+
+
+
+/* Foreground form container */
+.form-container {
+    background-image: url("https://www.pngkey.com/png/full/18-189377_glass-glare-png-window-reflection-png.png");
+    margin: .5%;
+    background-color: rgba(41, 41, 41, 0.9); /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #f8c24a; /* Gold text color */
+    z-index: 1; /* Bring form above background */
+    position: relative;
+
+}
+
+/* Headline styling */
+.form-container h1 {
+    font-size: 1.8rem;
+    color: #f8c24a; /* Gold text */
+    margin-bottom: 20px;
+}
+
+/* Individual form groups */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #f8c24a; /* Gold text */
+}
+
+/* Input fields */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cfa451; /* Gold border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1e1e1e; /* Dark input background */
+    color: #f8c24a; /* Gold text */
+}
+
+.form-group input::placeholder {
+    color: #8f8f8f; /* Light gold for placeholder */
+}
+
+.delete-button:hover{
+    background-color: #fd4b4b; /* Slightly darker gold */
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgb(255, 59, 59);
+    color: #ffffff;
+    font-weight: bold;
+}
+/* Submit button */
+.submit-button, .delete-button {
+    width: 100%;
+    background-color: #cfa451; /* Gold */
+    color: #1e1e1e; /* Black text */
+    font-size: 1rem;
+    margin: .5%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #ffea9a; /* Slightly darker gold */
+    transform: scale(1.02);
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    background-color: transparent;
+    color: #f8c24a; /* Gold text */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid #f8c24a; /* Gold border */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #f8c24a; /* Gold background */
+    color: #1e1e1e; /* Black text */
+
+}
+
+.Buttons{
+    display: flex;
+    justify-content: center;
+}
+.organizerLarge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #f8c24a; /* Gold text color */
+    z-index: 1; /* Bring form above background */
+    position: relative;
+}
+.organizer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    color: #f8c24a; /* Gold text color */
+    z-index: 1; /* Bring form above background */
+    position: relative;
+}
+.layoutContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+
