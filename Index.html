@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Endpoints Menu</title>
+  <link rel="stylesheet" href="./css/CSS.css">
+  <style>
+    /* Additional styles for horizontal wrapping */
+
+    .form-container h1 {
+      width: 100%; /* Make the title span across the full width */
+      text-align: center;
+    }
+
+    .form-group {
+      flex: 1 1 calc(33.33% - 30px); /* Control button size and responsiveness */
+      min-width: 200px; /* Set a minimum width for the buttons */
+      text-align: center; /* Center text alignment inside the form group */
+    }
+
+    .back-button {
+      display: inline-block;
+      width: 100%; /* Buttons take the full width of their container */
+    }
+  </style>
+</head>
+<body>
+<div class="background"></div>
+<div class="form-container">
+  <h1>API Endpoints Menu</h1>
+
+  <div class="form-group">
+    <a href="/api/continents" class="back-button">List of Continents</a>
+  </div>
+
+  <div class="form-group">
+    <a href="/api/continents/{name}" class="back-button">Continent by Name</a>
+  </div>
+
+  <div class="form-group">
+    <a href="/api/regions" class="back-button">List of Regions</a>
+  </div>
+
+  <div class="form-group">
+    <a href="./Templates/countries.html" class="back-button">List of Countries</a>
+  </div>
+
+  <div class="form-group">
+    <a href="/api/continents/{continent}/regions" class="back-button">Regions by Continent</a>
+  </div>
+
+  <div class="form-group">
+    <a href="./Templates/add_city.html" class="back-button">Add a City</a>
+  </div>
+
+</div>
+</body>
+</html>

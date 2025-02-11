@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Table with API Data</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="../css/CSS.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<!-- Background -->
+<div class="background"></div>
+
+<!-- Foreground Section -->
+<div id="app" class="form-container">
+  <h1>Country Information</h1>
+  <!-- Table Container -->
+  <div class="table-container">
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Area</th>
+        <th>National Day</th>
+        <th>Country Code 1</th>
+        <th>Country Code 2</th>
+        <th>Region</th>
+        <th>Continent</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr v-for="country in countries" :key="country.id">
+        <td>{{ country.name }}</td>
+        <td>{{ country.area }}</td>
+        <td>{{ country.national_day }}</td>
+        <td>{{ country.country_code2 }}</td>
+        <td>{{ country.country_code3 }}</td>
+        <td>{{ country.region.name }}</td>
+        <td>{{ country.region.continents.name }}</td>
+      </tr>
+      <tr v-if="countries.length === 0">
+        <td colspan="7">No data available</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Refresh Button -->
+  <button class="submit-button" @click="refreshData">Refresh Data</button>
+  <!-- Go Back Button -->
+  <div class="form-group">
+    <a href="../Index.html" class="back-button">Go Back</a>
+  </div>
+</div>
+
+<script src="../js/countriesList.js"></script>
+</body>
+</html>

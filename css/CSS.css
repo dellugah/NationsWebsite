@@ -1,0 +1,170 @@
+/* Reset some default styles */
+body, h1, form, input, label, button, div, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background wrapper */
+.background {
+    background-image: url('https://wallpapers.com/images/hd/gold-world-map-on-black-background-66cutmegkqqnzjca.jpg'); /* Replace 'your-image.jpg' with the actual image */
+    background-size: cover; /* Ensure it covers the entire viewport */
+    background-position: center;
+    filter: blur(8px); /* Apply blur to the background */
+    transform: scale(1.1); /* Scale the background slightly to hide edges */
+    position: fixed; /* Ensure the background fills the page and stays in place */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Keep the background behind the content */
+}
+/* Table container styling */
+.table-container {
+    overflow-y: auto; /* Add vertical scrolling */
+    max-height: 300px; /* Limit the height of the table container */
+    border: 1px solid #f8c24a; /* Gold border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 2%;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spaces between table cells */
+}
+
+/* Table headers */
+table th {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #f8c24a; /* Gold border for headers */
+    color: #2d2d2d;
+    background-color: #f8c24a;/* Gold text color */
+}
+
+/* Table rows and cells */
+table td {
+    padding: 8px;
+    border: 1px solid #f8c24a; /* Gold border for cells */
+    color: #f8c24a; /* Gold text color */
+}
+
+/* Alternate row background color */
+table tr:nth-child(even) {
+    background-color: #2d2d2d; /* Slightly lighter dark background for even rows */
+}
+
+/* Hover effect for rows */
+table tr:hover {
+    background-color: #3a3a3a; /* Highlight table row on hover */
+}
+
+/* Empty table row fallback message */
+table td[colspan] {
+    text-align: center;
+    color: #b99b4b; /* Light gold text for empty state */
+}
+
+
+
+/* Foreground form container */
+.form-container {
+    background-color: rgba(41, 41, 41, 0.9); /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    color: #f8c24a; /* Gold text color */
+    z-index: 1; /* Bring form above background */
+    position: relative;
+}
+
+/* Headline styling */
+.form-container h1 {
+    font-size: 1.8rem;
+    color: #f8c24a; /* Gold text */
+    margin-bottom: 20px;
+}
+
+/* Individual form groups */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #f8c24a; /* Gold text */
+}
+
+/* Input fields */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f8c24a; /* Gold border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1e1e1e; /* Dark input background */
+    color: #f8c24a; /* Gold text */
+}
+
+.form-group input::placeholder {
+    color: #b99b4b; /* Light gold for placeholder */
+}
+
+/* Submit button */
+.submit-button {
+    width: 100%;
+    background-color: #f8c24a; /* Gold */
+    color: #1e1e1e; /* Black text */
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #d9aa3e; /* Slightly darker gold */
+    transform: scale(1.02);
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    background-color: transparent;
+    color: #f8c24a; /* Gold text */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid #f8c24a; /* Gold border */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #f8c24a; /* Gold background */
+    color: #1e1e1e; /* Black text */
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Fetch API</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<!-- Vue app container -->
+<div id="app">
+    <h2>Cities</h2>
+    <table>
+        <thead>
+        <tr>
+            <th v-for="(heading, index) in headings" :key="index">{{ heading }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="(city, index) in cities" :key="city.cityId">
+            <td>{{ city.CityId }}</td>
+            <td>{{ city.CityName }}</td>
+            <td>{{ city.Population }}</td>
+            <td>{{ city.Province }}</td>
+            <td>{{city.country.name}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Include the Vue app script LAST -->
+<script src="../js/backup/newScript.js"></script>
+</body>
+</html>
